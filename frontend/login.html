@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | SlimeCraft AI</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="auth-page">
+
+    <div class="auth-layout">
+
+        <!-- Left side -->
+        <section class="auth-visual">
+
+            <a href="/index" class="brand auth-brand">
+                <span class="brand-mark">S</span>
+                <span>SlimeCraft <strong>AI</strong></span>
+            </a>
+
+            <div class="auth-visual-content">
+
+                <span class="section-label">WELCOME TO SLIMECRAFT</span>
+
+                <h1>
+                    Your slime,
+                    <br>
+                    <em>your way.</em>
+                </h1>
+
+                <p>
+                    Save your conversations, explore recipes,
+                    and get help whenever your slime needs a little rescue.
+                </p>
+
+                <div class="auth-slime">
+
+                    <div class="auth-slime-shine"></div>
+
+                    <div class="blob-face">
+                        <span class="eye left-eye"></span>
+                        <span class="eye right-eye"></span>
+                        <span class="mouth">⌣</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="auth-footer-note">
+                ✦ Focused on slime making
+            </div>
+
+        </section>
+
+
+        <!-- Form -->
+        <section class="auth-form-section">
+
+            <div class="auth-form-container">
+
+                <a href="/index" class="mobile-brand brand">
+                    <span class="brand-mark">S</span>
+                    <span>SlimeCraft <strong>AI</strong></span>
+                </a>
+
+                <div class="auth-heading">
+
+                    <span class="section-label" id="form-label">
+                        WELCOME BACK
+                    </span>
+
+                    <h2 id="form-title">
+                        Let's get creating.
+                    </h2>
+
+                    <p id="form-subtitle">
+                        Log in to continue your slime journey.
+                    </p>
+
+                </div>
+
+
+                <!-- Signup name -->
+                <div class="form-field signup-field hidden">
+
+                    <label for="name">Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Your name"
+                    >
+
+                </div>
+
+
+                <div class="form-field">
+
+                    <label for="email">Email</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="you@example.com"
+                        autocomplete="email"
+                    >
+
+                </div>
+
+
+                <div class="form-field">
+
+                    <div class="password-label">
+
+                        <label for="password">Password</label>
+
+                        <button type="button" id="toggle-password">
+                            Show
+                        </button>
+
+                    </div>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                    >
+
+                </div>
+
+
+                <button class="button auth-button" id="auth-button">
+                    Log in
+                    <span>→</span>
+                </button>
+
+
+                <div class="auth-divider">
+                    <span>or</span>
+                </div>
+
+
+                <p class="auth-switch">
+
+                    <span id="switch-text">
+                        Don't have an account?
+                    </span>
+
+                    <button id="switch-mode">
+                        Sign up
+                    </button>
+
+                </p>
+
+
+                <p class="auth-message" id="auth-message"></p>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="/static/login.js"></script>
+
+</body>
+</html>

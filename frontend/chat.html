@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chat | SlimeCraft AI</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="chat-page">
+
+    <div class="chat-app">
+
+        <!-- Sidebar -->
+        <aside class="chat-sidebar" id="chat-sidebar">
+
+            <div class="sidebar-top">
+
+                <a href="/" class="brand">
+                    <span class="brand-mark">S</span>
+                    <span>SlimeCraft <strong>AI</strong></span>
+                </a>
+
+                <button class="new-chat-button" id="new-chat-button">
+                    <span>+</span>
+                    New chat
+                </button>
+
+            </div>
+
+
+            <div class="sidebar-section">
+
+                <span class="sidebar-label">
+                    RECENT CHATS
+                </span>
+
+                <div id="chat-list" class="chat-list">
+
+                    <!-- Loaded dynamically -->
+
+                    <div class="empty-chats">
+                        No conversations yet.
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="sidebar-bottom">
+
+                <div class="user-profile">
+
+                    <div class="user-avatar" id="user-avatar">
+                        S
+                    </div>
+
+                    <div class="user-info">
+
+                        <strong id="user-name">
+                            User
+                        </strong>
+
+                        <small id="user-email">
+                            user@example.com
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <button class="logout-button" id="logout-button">
+                    Log out
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- Main -->
+        <main class="chat-main">
+
+            <header class="chat-header">
+
+                <button class="mobile-menu" id="mobile-menu">
+                    ☰
+                </button>
+
+                <div class="chat-title">
+
+                    <div class="chat-status-avatar">
+                        S
+                    </div>
+
+                    <div>
+                        <strong>SlimeCraft AI</strong>
+                        <span>
+                            <i></i>
+                            Online
+                        </span>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- Messages -->
+            <section class="messages-area" id="messages-area">
+
+                <div class="welcome-chat" id="welcome-chat">
+
+                    <div class="welcome-icon">
+                        S
+                    </div>
+
+                    <span class="section-label">
+                        SLIMECRAFT AI
+                    </span>
+
+                    <h1>
+                        What are we making today?
+                    </h1>
+
+                    <p>
+                        Ask me about slime recipes, ingredients,
+                        textures, troubleshooting, storage or slime science.
+                    </p>
+
+
+                    <div class="suggestion-grid">
+
+                        <button class="suggestion-card">
+                            <span>♡</span>
+                            <strong>Fix sticky slime</strong>
+                            <small>My slime is too sticky</small>
+                        </button>
+
+                        <button class="suggestion-card">
+                            <span>✦</span>
+                            <strong>Make fluffy slime</strong>
+                            <small>How do I make fluffy slime?</small>
+                        </button>
+
+                        <button class="suggestion-card">
+                            <span>○</span>
+                            <strong>Slime ingredients</strong>
+                            <small>What ingredients do I need?</small>
+                        </button>
+
+                        <button class="suggestion-card">
+                            <span>◇</span>
+                            <strong>Slime science</strong>
+                            <small>Why does slime stretch?</small>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="messages-container" id="messages-container">
+                    <!-- Messages inserted here -->
+                </div>
+
+            </section>
+
+
+            <!-- Input -->
+            <div class="chat-input-wrapper">
+
+                <form class="chat-input-container" id="chat-form">
+
+                    <textarea
+                        id="message-input"
+                        rows="1"
+                        placeholder="Ask anything about slime..."
+                        autocomplete="off"
+                    ></textarea>
+
+                    <button
+                        type="submit"
+                        class="send-button"
+                        id="send-button"
+                        aria-label="Send message"
+                    >
+                        ↑
+                    </button>
+
+                </form>
+
+                <p class="input-note">
+                    SlimeCraft AI is focused on slime-making topics.
+                </p>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="/static/chat.js"></script>
+
+</body>
+</html>
