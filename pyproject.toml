@@ -3,6 +3,16 @@ name = "slimecraft-ai"
 version = "1.0.0"
 description = "Closed-domain slime making chatbot"
 requires-python = ">=3.12"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "transformers",
+    "torch",
+    "scikit-learn",
+    "pandas",
+    "sentencepiece",
+    "sentence-transformers"
+]
 
 [tool.vercel]
 entrypoint = "backend.app:app"
